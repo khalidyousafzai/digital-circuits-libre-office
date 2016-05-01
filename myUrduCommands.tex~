@@ -1,0 +1,47 @@
+%this file describes urdu commands for the commonly used english latex commands
+
+%chapter, section etc
+\newcommand{\باب}[1]{\chapter{#1}}                                      %defining commonly used commands
+\newcommand{\حصہ}[1]{\section{#1}}
+\newcommand{\جزحصہ}[1]{\subsection{#1}}
+\newcommand{\جزجزحصہ}[1]{\subsubsection{#1}}
+
+%english text in urdu mode
+\newcommand{\تحریرانگریزی}[1]{\textenglish{#1}}	% english text in urdu mode
+
+%end commands cannot be redefined and as such these two are not usable
+%\newcommand{\ابتدا}[1]{\begin{#1}}
+%\newcommand{\انتہا}[1]{\end{#1}}
+
+%include and input directives for adding external files into the main document 
+\newcommand{\بشمول}[1]{\includeonly{#1}}
+\newcommand{\شامل}[1]{\include{#1}}
+\newcommand{\داخل}[1]{\input{#1}}
+
+%to use extra latex packages
+\newcommand{\استعمال}[1]{\usepackage{#1}}
+
+%footnotes and indexes
+\newcommand{\حاشیہب}[1]{{\raggedright{\footnote{\textenglish{#1}}}} }               %footnote to the left hand side
+\newcommand{\حاشیہد}[1]{{\raggedleft{\footnote{#1}}}}
+\newcommand{\حاشیہط}[1]{\marginpar{#1}}
+
+%references and labels
+\newcommand{\شناخت}[1]{\label{#1}}
+\newcommand{\حوالہ}[1]{\ref{#1}}
+
+%itemize, bullets and numbered items   
+\newcommand{\اشیاء}{itemize}                               %used in   \begin{itemize}
+\newcommand{\شے}[1]{\item {#1}}			%used in    \item
+
+%maths commands
+\newcommand{\عددی}[1]{$ #1 $}				% in-line math mode
+\newcommand{\سیدھ}{align}					%used in    \begin{align}
+%\newcommand{\فاصلہ}[1]{\hspace{#1}}
+%\newcommand{\حکم}[2]{\hspace{1in} {#1} \hspace{0.5in} {#2}}
+
+\newcommand{\بائیں}[1]{ \left #1}		%left bracket must be enclosed in \عددی{} command
+\newcommand{\دائیں}[1]{ \right #1}         %right bracket must be enclosed in \عددی{} command
+
+\newcommand{\ضرب}{\time}					%multiplication symbol
+

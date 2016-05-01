@@ -1,0 +1,74 @@
+\documentclass[leqno,a4paper,12pt]{book}
+% \usepackage[utf8x]{inputenc}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+%\usepackage{makeidx}
+%\usepackage{makeindex}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{commath}										%differentiation symbols
+\usepackage{bm}											%bold greek letters too
+\usepackage{lineno}
+\usepackage{graphics}
+\usepackage[]{graphicx} 
+%\usepackage{parskip}
+\usepackage[stable]{footmisc}								%for footnotes in the headings
+\usepackage{fixltx2e}										%subscripts and superscripts in text
+\usepackage{ulem}										%underline, double underline,strike out,scratch out, wavy underline
+
+\usepackage{xspace}									%helps in putting space after macros and before following text 
+\usepackage{todonotes}									%english margin coloured notes with a line
+\usepackage{pdfsync}                                                                            %forward search using okular
+
+%\usepackage{makeidx}
+%\makeindex
+
+\linenumbers
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+
+%\numberwithin{figure}{chapter}  %for figure
+
+\setmainlanguage{arabic}
+\setotherlanguages{english}
+
+\newfontfamily\arabicfont[Scale=1.0,Script=Arabic]{Scheherazade}
+\newfontfamily\urdufont[Scale=1.0,Script=Arabic]{XB Tabriz}
+
+\setcounter{secnumdepth}{5} 
+\graphicspath{{./epsFiguresChapter1/}{./epsFiguresChapter2/}{./epsFiguresChapter3/}{./epsFiguresChapter4/}}					%paths to figures
+
+\parskip=7.2pt						%distance between paragraphs
+
+\author{خالد خان}
+\title{مائکرو کنٹرولر 8051}
+%\date{\LR{23 اگست 2011}}
+\date{7 نومبر 2011}
+
+  \input{myUrduCommands.tex}                  %turning latex into urdu
+\input {kvmacros.tex}
+\includeonly{chapterBinaryNumbers,chapterDigitalElectronics,chapterAssemblyLanguage,chapterHardware}                 %what can be included
+
+\begin{document}
+\begin{urdufont}
+\maketitle
+
+
+\tableofcontents
+
+%\include{chapterBinaryNumbers}				%what is included
+%\include{chapterDigitalElectronics}
+%\include{chapterAssemblyLanguage}
+%\include{chapterHardware}
+
+\input{chapterBinaryNumbers.tex}
+\input{chapterDigitalElectronics.tex}
+%\input{chapterAssemblyLanguage.tex}
+%\input{chapterHardware.tex} 
+
+
+
+\listoftodos								%gives a complete list of all the things pending
+%\printindex
+
+\end{urdufont}
+\end{document}

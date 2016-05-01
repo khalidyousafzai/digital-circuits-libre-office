@@ -1,0 +1,23 @@
+v 20110115 2
+B 46200 46100 4700 2700 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+C 46500 47700 1 0 0 kBufferInvertingNoninverting.sym
+{
+T 46400 47600 5 10 0 0 0 0 1
+device=4009
+T 46400 50400 5 10 0 0 0 0 1
+footprint=DIP16
+}
+C 48800 47200 1 0 0 kBufferNonInvertingB.sym
+{
+T 49400 47900 5 10 0 0 0 0 1
+device=4009
+T 49400 50700 5 10 0 0 0 0 1
+footprint=DIP16
+}
+C 48800 47900 1 0 0 kNot.sym
+{
+T 49400 48600 5 10 0 0 0 0 1
+device=4009
+T 49400 51400 5 10 0 0 0 0 1
+footprint=DIP16
+}
